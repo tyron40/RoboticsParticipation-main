@@ -1,4 +1,5 @@
 # Robotics Participation
+# Sign in, sign out, and proof of-concept of waiver for local robotics teams 
 
 ## Purpose
 
