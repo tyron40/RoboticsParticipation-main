@@ -1,5 +1,5 @@
 <template>
-  <ThankYou v-if="submittedSuccessfully" />
+  <ThankYou v-if="submittedSuccessfully" @return_to_prev="handleReturnToPrev" />
   <SomethingWentWrong v-if="hasSubmissionError"/>
   <form v-if="!submittedSuccessfully && !hasSubmissionError" @submit.prevent="handleGoToThankYou" >
     <!-- Form Example (submitting currently does nothing with the data) -->
@@ -36,6 +36,7 @@ import SomethingWentWrong from './SomethingWentWrong.vue';
 import callSheetAPI from '@/utils/api';
 export default {
     name: "SignIn",
+    emits: ["return_to_signin"],
     data() {
         return {
             signInName: "",
@@ -67,6 +68,9 @@ export default {
             self.hasSubmissionError = true;
           }
         };
+      },
+      handleReturnToPrev() {
+        this.$emit('return_to_signin')
       }
     }
 }

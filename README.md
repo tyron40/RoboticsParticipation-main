@@ -2,7 +2,7 @@
 
 ## Purpose
 
-* Allow waiver agreement, sign in, and sign out for robotics meetings
+* Allow ~waiver agreement,~ sign in, and sign out for robotics meetings
 
 ## Project setup
 ```
